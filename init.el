@@ -3,11 +3,29 @@
   (md5 (concat "UGXp4Adb.p8m;baTN8ybKxebV"
                (car (split-string (downcase (system-name)) "\\.")))))
 
+(defconst init/solarized-base03  "#002b36")
+(defconst init/solarized-base02  "#073642")
+(defconst init/solarized-base01  "#586e75")
+(defconst init/solarized-base00  "#657b83")
+(defconst init/solarized-base0   "#839496")
+(defconst init/solarized-base1   "#93a1a1")
+(defconst init/solarized-base2   "#eee8d5")
+(defconst init/solarized-base3   "#fdf6e3")
+(defconst init/solarized-yellow  "#b58900")
+(defconst init/solarized-orange  "#cb4b16")
+(defconst init/solarized-red     "#dc322f")
+(defconst init/solarized-magenta "#d33682")
+(defconst init/solarized-violet  "#6c71c4")
+(defconst init/solarized-blue    "#268bd2")
+(defconst init/solarized-cyan    "#2aa198")
+(defconst init/solarized-green   "#859900")
+
 (defun dotspacemacs/layers ()
   (setq-default dotspacemacs-distribution 'spacemacs
                 dotspacemacs-configuration-layer-path '()
                 dotspacemacs-configuration-layers '(auto-completion
                                                     better-defaults
+                                                    colors
                                                     c-c++
                                                     deft
                                                     emacs-lisp
@@ -35,6 +53,17 @@
                 dotspacemacs-leader-key "SPC"
                 dotspacemacs-emacs-leader-key "M-m"
                 dotspacemacs-command-key ":")
+  (setq-default spacemacs-evil-cursors `((normal       ,init/solarized-yellow   box)
+                                         (insert       ,init/solarized-green   (bar  . 2))
+                                         (emacs        ,init/solarized-blue     box)
+                                         (hybrid       ,init/solarized-blue    (bar  . 2))
+                                         (replace      ,init/solarized-magenta (hbar . 2))
+                                         (evilified    ,init/solarized-yellow   box)
+                                         (visual       ,init/solarized-orange  (hbar . 2))
+                                         (motion       ,init/solarized-violet   box)
+                                         (lisp         ,init/solarized-magenta  box)
+                                         (iedit        ,init/solarized-red      box)
+                                         (iedit-insert ,init/solarized-red     (bar  . 2))))
   (let ((host (init/hashed-host-slug))
         (desktop "24e0c4b6b602908fd5cc6be519f8d96b")
         (laptop "1808cc85340608cde18d5cab8b3be29d"))
