@@ -35,6 +35,7 @@
                                                     org
                                                     osx
                                                     (shell :variables shell-default-term-shell "/usr/local/bin/zsh")
+                                                    spell-checking
                                                     syntax-checking
                                                     version-control)
                 dotspacemacs-additional-packages '()
@@ -89,6 +90,7 @@
 
 (defun dotspacemacs/user-init ()
   (setq deft-directory "/Users/sam/Dropbox/Notes")
+  (setq ispell-dictionary "british")
   (setq flycheck-c/c++-gcc-executable  "gcc-5")
   (setq solarized-distinct-fringe-background t
         solarized-use-more-italic t
@@ -96,10 +98,22 @@
         solarized-use-variable-pitch nil))
 
 (defun dotspacemacs/user-config ()
+  (setq org-directory "~/Dropbox/Notes"
+        org-default-notes-file (concat org-directory "/Today.org")
+        org-agenda-files (list (concat org-directory "/Today.org"))
+        org-startup-folded "showall"
+        org-bullets-bullet-list '("*"))
   (setq powerline-default-separator nil)
-  (with-eval-after-load 'org
-    (setq org-startup-folded "showall"
-          org-bullets-bullet-list '("*"))))
+
+  (defun init/apple-uk-keymap (map)
+    (define-key map (kbd "M-2") #'(lambda () (interactive) (insert "€")))
+    (define-key map (kbd "M-3") #'(lambda () (interactive) (insert "#"))))
+
+  (with-eval-after-load 'evil
+    (init/apple-uk-keymap evil-insert-state-map))
+
+  (with-eval-after-load 'helm
+    (init/apple-uk-keymap helm-map)))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
