@@ -69,21 +69,23 @@
         (laptop "1808cc85340608cde18d5cab8b3be29d"))
     (message (concat "init/hashed-host-slug=" host))
     (when (equal host desktop)
-      (progn
-        (when window-system (set-frame-size (selected-frame) 100 60))
-        (setq-default dotspacemacs-default-font '("Menlo"
-                                                  :size 17
-                                                  :weight normal
-                                                  :width normal
-                                                  :powerline-scale 1.1))))
+      (when window-system
+        (menu-bar-mode 1)
+        (set-frame-size (selected-frame) 100 60))
+      (setq-default dotspacemacs-default-font '("Menlo"
+                                                :size 17
+                                                :weight normal
+                                                :width normal
+                                                :powerline-scale 1.1)))
     (when (equal host laptop)
-      (progn
-        (when window-system (set-frame-size (selected-frame) 120 46))
-        (setq-default dotspacemacs-default-font '("Menlo"
-                                                  :size 13
-                                                  :weight normal
-                                                  :width normal
-                                                  :powerline-scale 1.1))))))
+      (when window-system
+        (menu-bar-mode 1)
+        (set-frame-size (selected-frame) 120 46))
+      (setq-default dotspacemacs-default-font '("Menlo"
+                                                :size 13
+                                                :weight normal
+                                                :width normal
+                                                :powerline-scale 1.1)))))
 
 (defun dotspacemacs/user-init ()
   (setq deft-directory "/Users/sam/Dropbox/Notes")
