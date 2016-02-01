@@ -91,6 +91,9 @@
 
 (defun dotspacemacs/user-init ()
   (setq deft-directory "/Users/sam/Dropbox/Notes")
+  (setq display-time-24hr-format t
+        display-time-default-load-average nil)
+  (display-time-mode)
   (setq ispell-dictionary "british")
   (setq flycheck-c/c++-gcc-executable  "gcc-5")
   (setq solarized-distinct-fringe-background t
