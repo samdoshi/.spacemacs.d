@@ -117,7 +117,13 @@
     (init/apple-uk-keymap evil-insert-state-map))
 
   (with-eval-after-load 'helm
-    (init/apple-uk-keymap helm-map)))
+    (init/apple-uk-keymap helm-map))
+
+  (defun init/edit-Today.org ()
+    (interactive)
+    (find-file "~/Dropbox/Notes/Today.org"))
+
+  (spacemacs/set-leader-keys "aN" 'init/edit-Today.org))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
