@@ -123,6 +123,13 @@
   (with-eval-after-load 'helm
     (init/apple-uk-keymap helm-map))
 
+  (defun init/kill-deft-window (orig-fun &rest args)
+    (interactive)
+    (kill-buffer "*Deft*"))
+
+  (with-eval-after-load 'deft
+    (advice-add 'deft-open-file :after 'init/kill-deft-window))
+
   (defun init/edit-Today.org ()
     (interactive)
     (find-file "~/Dropbox/Notes/Today.org"))
