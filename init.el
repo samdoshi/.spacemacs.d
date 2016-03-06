@@ -96,6 +96,7 @@
   (display-time-mode)
   (setq evil-escape-key-sequence "jk"
         evil-escape-unordered-key-sequence t)
+  (setq haskell-process-show-debug-tips nil)
   (setq ispell-dictionary "british")
   (setq flycheck-c/c++-gcc-executable  "gcc-5")
   (setq solarized-distinct-fringe-background t
