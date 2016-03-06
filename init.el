@@ -27,6 +27,7 @@
                                                     better-defaults
                                                     colors
                                                     c-c++
+                                                    dash
                                                     deft
                                                     emacs-lisp
                                                     git
