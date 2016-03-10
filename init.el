@@ -134,7 +134,16 @@
     (interactive)
     (find-file "~/Dropbox/Notes/Today.org"))
 
-  (spacemacs/set-leader-keys "aN" 'init/edit-Today.org))
+  (spacemacs/set-leader-keys "aN" 'init/edit-Today.org)
+
+  ;; Change frame font sizes with Super-Shift-{-=}
+  (defun init/change-frame-font-height (delta)
+    (let ((current-height (face-attribute 'default :height)))
+      (set-face-attribute 'default
+                          (selected-frame)
+                          :height (+ current-height delta))))
+  (bind-key "s-+" '(lambda () (interactive) (init/change-frame-font-height +10)))
+  (bind-key "s-_" '(lambda () (interactive) (init/change-frame-font-height -10))))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
