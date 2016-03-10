@@ -35,7 +35,9 @@
                                                     markdown
                                                     org
                                                     osx
-                                                    (shell :variables shell-default-term-shell "/usr/local/bin/zsh")
+                                                    (shell :variables
+                                                           shell-default-shell 'eshell
+                                                           shell-default-term-shell "/usr/local/bin/zsh")
                                                     spell-checking
                                                     syntax-checking
                                                     version-control)
