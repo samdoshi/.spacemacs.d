@@ -32,6 +32,7 @@
                                                     emacs-lisp
                                                     git
                                                     haskell
+                                                    html
                                                     markdown
                                                     org
                                                     osx
@@ -93,6 +94,7 @@
                                                 :powerline-scale 1.1)))))
 
 (defun dotspacemacs/user-init ()
+  (setq css-indent-offset 2)
   (setq deft-directory "/Users/sam/Dropbox/Notes")
   (setq display-time-24hr-format t
         display-time-default-load-average nil)
@@ -105,7 +107,10 @@
   (setq solarized-distinct-fringe-background t
         solarized-use-more-italic t
         solarized-scale-org-headlines nil
-        solarized-use-variable-pitch nil))
+        solarized-use-variable-pitch nil)
+  (setq web-mode-markup-indent-offset 2
+        web-mode-css-indent-offset 2
+        web-mode-code-indent-offset 2))
 
 (defun dotspacemacs/user-config ()
   (setq org-directory "~/Dropbox/Notes"
