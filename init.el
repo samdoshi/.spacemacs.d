@@ -41,7 +41,8 @@
                                                            shell-default-term-shell "/usr/local/bin/zsh")
                                                     spell-checking
                                                     syntax-checking
-                                                    version-control)
+                                                    version-control
+                                                    yaml)
                 dotspacemacs-additional-packages '()
                 dotspacemacs-excluded-packages '()
                 dotspacemacs-delete-orphan-packages t))
