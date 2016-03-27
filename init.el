@@ -109,6 +109,9 @@
         solarized-use-more-italic t
         solarized-scale-org-headlines nil
         solarized-use-variable-pitch nil)
+  (setq visual-line-fringe-indicators '(left-curly-arrow right-curly-arrow))
+  (add-hook 'markdown-mode-hook 'turn-on-visual-line-mode)
+  (add-hook 'org-mode-hook 'turn-on-visual-line-mode)
   (setq web-mode-markup-indent-offset 2
         web-mode-css-indent-offset 2
         web-mode-code-indent-offset 2))
