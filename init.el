@@ -26,7 +26,8 @@
                 dotspacemacs-configuration-layers '(auto-completion
                                                     better-defaults
                                                     colors
-                                                    c-c++
+                                                    (c-c++ :variables
+                                                           c-c++-enable-clang-support t)
                                                     dash
                                                     deft
                                                     emacs-lisp
@@ -36,6 +37,7 @@
                                                     markdown
                                                     org
                                                     osx
+                                                    semantic
                                                     (shell :variables
                                                            shell-default-shell 'eshell
                                                            shell-default-term-shell "/usr/local/bin/zsh")
