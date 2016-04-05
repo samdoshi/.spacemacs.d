@@ -45,7 +45,7 @@
                                                     syntax-checking
                                                     version-control
                                                     yaml)
-                dotspacemacs-additional-packages '()
+                dotspacemacs-additional-packages '(editorconfig)
                 dotspacemacs-excluded-packages '()
                 dotspacemacs-delete-orphan-packages t))
 
@@ -129,6 +129,9 @@
   (defun init/apple-uk-keymap (map)
     (define-key map (kbd "M-2") #'(lambda () (interactive) (insert "€")))
     (define-key map (kbd "M-3") #'(lambda () (interactive) (insert "#"))))
+
+  (with-eval-after-load 'editorconfig
+    (editorconfig-mode 1))
 
   (with-eval-after-load 'evil
     (init/apple-uk-keymap evil-insert-state-map))
