@@ -75,6 +75,10 @@
                                          (lisp         ,init/solarized-magenta  box)
                                          (iedit        ,init/solarized-red      box)
                                          (iedit-insert ,init/solarized-red     (bar  . 2))))
+
+  (with-eval-after-load 'editorconfig
+    (editorconfig-mode 1))
+
   (let ((host (init/hashed-host-slug))
         (desktop "24e0c4b6b602908fd5cc6be519f8d96b")
         (laptop "1808cc85340608cde18d5cab8b3be29d"))
@@ -131,9 +135,6 @@
   (defun init/apple-uk-keymap (map)
     (define-key map (kbd "M-2") #'(lambda () (interactive) (insert "€")))
     (define-key map (kbd "M-3") #'(lambda () (interactive) (insert "#"))))
-
-  (with-eval-after-load 'editorconfig
-    (editorconfig-mode 1))
 
   (with-eval-after-load 'evil
     (init/apple-uk-keymap evil-insert-state-map))
