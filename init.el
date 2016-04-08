@@ -41,7 +41,8 @@
                                                     (shell :variables
                                                            shell-default-shell 'eshell
                                                            shell-default-term-shell "/usr/local/bin/zsh")
-                                                    spell-checking
+                                                    (spell-checking :variables
+                                                                    spell-checking-enable-by-default nil)
                                                     syntax-checking
                                                     version-control
                                                     yaml)
