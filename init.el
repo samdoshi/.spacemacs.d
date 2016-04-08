@@ -62,7 +62,8 @@
                 dotspacemacs-leader-key "SPC"
                 dotspacemacs-emacs-leader-key "M-m"
                 dotspacemacs-command-key ":"
-                dotspacemacs-scratch-mode 'emacs-lisp-mode)
+                dotspacemacs-scratch-mode 'emacs-lisp-mode
+                dotspacemacs-check-for-update nil)
   (setq-default spacemacs-evil-cursors `((normal       ,init/solarized-yellow   box)
                                          (insert       ,init/solarized-green   (bar  . 2))
                                          (emacs        ,init/solarized-blue     box)
