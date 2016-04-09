@@ -103,6 +103,7 @@
                                                 :powerline-scale 1.1)))))
 
 (defun dotspacemacs/user-init ()
+  (setq c-basic-offset 4)
   (setq css-indent-offset 2)
   (setq deft-directory "/Users/sam/Dropbox/Notes")
   (setq display-time-24hr-format t
@@ -117,6 +118,7 @@
         solarized-use-more-italic t
         solarized-scale-org-headlines nil
         solarized-use-variable-pitch nil)
+  (setq tab-width 4)
   (setq visual-line-fringe-indicators '(left-curly-arrow right-curly-arrow))
   (add-hook 'markdown-mode-hook 'turn-on-visual-line-mode)
   (add-hook 'org-mode-hook 'turn-on-visual-line-mode)
