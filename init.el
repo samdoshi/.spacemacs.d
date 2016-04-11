@@ -37,7 +37,6 @@
                                                     markdown
                                                     org
                                                     osx
-                                                    semantic
                                                     (shell :variables
                                                            shell-default-shell 'eshell
                                                            shell-default-term-shell "/usr/local/bin/zsh")
