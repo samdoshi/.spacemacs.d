@@ -32,6 +32,7 @@
                                                     deft
                                                     emacs-lisp
                                                     git
+                                                    gtags
                                                     haskell
                                                     html
                                                     markdown
