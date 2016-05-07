@@ -46,7 +46,8 @@
                                                     syntax-checking
                                                     version-control
                                                     yaml)
-                dotspacemacs-additional-packages '(editorconfig)
+                dotspacemacs-additional-packages '(editorconfig
+                                                   extempore-mode)
                 dotspacemacs-excluded-packages '()
                 dotspacemacs-delete-orphan-packages t))
 
