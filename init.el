@@ -112,6 +112,7 @@
   (setq display-time-24hr-format t
         display-time-default-load-average nil)
   (display-time-mode)
+  (setq evil-lisp-state-enter-lisp-state-on-command nil)
   (setq evil-escape-key-sequence "jk"
         evil-escape-unordered-key-sequence t)
   (setq haskell-process-show-debug-tips nil)
