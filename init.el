@@ -131,6 +131,7 @@
         web-mode-code-indent-offset 2))
 
 (defun dotspacemacs/user-config ()
+  (setq hl-paren-colors '("#d33682"))
   (setq org-directory "~/Dropbox/Notes"
         org-default-notes-file (concat org-directory "/Today.org")
         org-agenda-files (list (concat org-directory "/Today.org"))
