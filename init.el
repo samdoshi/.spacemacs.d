@@ -31,6 +31,7 @@
                                                     dash
                                                     deft
                                                     emacs-lisp
+                                                    finance
                                                     git
                                                     gtags
                                                     haskell
