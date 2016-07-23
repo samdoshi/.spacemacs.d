@@ -163,6 +163,12 @@
 
   (spacemacs/set-leader-keys "aN" 'init/edit-Today.org)
 
+  (defun init/edit-Ledger ()
+    (interactive)
+    (find-file "~/Dropbox/Ledger/main.ledger"))
+
+  (spacemacs/set-leader-keys "aB" 'init/edit-Ledger)
+
   ;; Change frame font sizes with Super-Shift-{-=}
   (defun init/change-frame-font-height (delta)
     (let ((current-height (face-attribute 'default :height)))
