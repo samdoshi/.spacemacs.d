@@ -118,7 +118,7 @@
         evil-escape-unordered-key-sequence t)
   (setq haskell-process-show-debug-tips nil)
   (setq ispell-dictionary "british")
-  (setq flycheck-c/c++-gcc-executable  "gcc-5")
+  (setq flycheck-c/c++-gcc-executable "gcc-5")
   (setq solarized-distinct-fringe-background t
         solarized-use-more-italic t
         solarized-scale-org-headlines nil
@@ -139,6 +139,8 @@
         org-startup-folded "showall"
         org-bullets-bullet-list '("*"))
   (setq powerline-default-separator nil)
+  ;; remove (spaceline-compile) once 0.200 lands
+  (spaceline-compile)
 
   (defun init/apple-uk-keymap (map)
     (define-key map (kbd "M-2") #'(lambda () (interactive) (insert "€")))
