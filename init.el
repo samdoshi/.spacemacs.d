@@ -37,6 +37,7 @@
                                                     haskell
                                                     html
                                                     markdown
+                                                    nixos
                                                     org
                                                     osx
                                                     (shell :variables
