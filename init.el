@@ -22,6 +22,8 @@
 
 (defun dotspacemacs/layers ()
   (setq-default dotspacemacs-distribution 'spacemacs
+                dotspacemacs-enable-lazy-installation 'unused
+                dotspacemacs-ask-for-lazy-installation t
                 dotspacemacs-configuration-layer-path '()
                 dotspacemacs-configuration-layers '(auto-completion
                                                     better-defaults
@@ -50,7 +52,7 @@
                 dotspacemacs-additional-packages '(editorconfig
                                                    extempore-mode)
                 dotspacemacs-excluded-packages '()
-                dotspacemacs-delete-orphan-packages t))
+                dotspacemacs-install-packages 'used-only))
 
 (defun dotspacemacs/init ()
   (setq-default dotspacemacs-editing-style 'vim
@@ -63,10 +65,14 @@
                                       zenburn)
                 dotspacemacs-leader-key "SPC"
                 dotspacemacs-emacs-leader-key "M-m"
-                dotspacemacs-command-key ":"
+                dotspacemacs-command-key "SPC"
+                dotspacemacs-colorize-cursor-according-to-state t
                 dotspacemacs-scratch-mode 'emacs-lisp-mode
+                dotspacemacs-startup-lists '((recents . 7)
+                                             (projects . 5))
                 dotspacemacs-enable-paste-micro-state nil
                 dotspacemacs-whitespace-cleanup 'changed
+                dotspacemacs-line-numbers nil
                 dotspacemacs-check-for-update nil)
   (setq-default spacemacs-evil-cursors `((normal       ,init/solarized-yellow   box)
                                          (insert       ,init/solarized-green   (bar  . 2))
