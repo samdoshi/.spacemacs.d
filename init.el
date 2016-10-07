@@ -125,6 +125,7 @@
   (setq haskell-process-show-debug-tips nil)
   (setq ispell-dictionary "british")
   (setq flycheck-c/c++-gcc-executable "gcc-5")
+  (setq org-startup-indented t)
   (setq solarized-distinct-fringe-background t
         solarized-use-more-italic t
         solarized-scale-org-headlines nil
