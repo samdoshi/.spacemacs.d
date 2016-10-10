@@ -47,6 +47,8 @@
                                                     (spell-checking :variables
                                                                     spell-checking-enable-by-default nil)
                                                     syntax-checking
+                                                    (ranger :variables
+                                                            ranger-show-preview t)
                                                     version-control
                                                     yaml)
                 dotspacemacs-additional-packages '(editorconfig
