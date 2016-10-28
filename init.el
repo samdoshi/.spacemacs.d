@@ -117,7 +117,7 @@
 (defun dotspacemacs/user-init ()
   (setq c-basic-offset 4)
   (setq css-indent-offset 2)
-  (setq deft-directory "/Users/sam/Dropbox/Notes")
+  (setq deft-directory "~/Dropbox/Notes")
   (setq display-time-24hr-format t
         display-time-default-load-average nil)
   (display-time-mode)
