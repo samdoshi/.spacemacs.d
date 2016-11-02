@@ -93,7 +93,8 @@
 
   (let ((host (init/hashed-host-slug))
         (desktop "24e0c4b6b602908fd5cc6be519f8d96b")
-        (laptop "1808cc85340608cde18d5cab8b3be29d"))
+        (laptop "1808cc85340608cde18d5cab8b3be29d")
+        (linux-desktop "5a3ddd28cb680f9f65caf6f45ccfb363"))
     (message (concat "init/hashed-host-slug=" host))
     (when (equal host desktop)
       (when window-system
@@ -110,6 +111,12 @@
         (set-frame-size (selected-frame) 120 46))
       (setq-default dotspacemacs-default-font '("Menlo"
                                                 :size 13
+                                                :weight normal
+                                                :width normal
+                                                :powerline-scale 1.1)))
+    (when (equal host linux-desktop)
+      (setq-default dotspacemacs-default-font '("Roboto Mono"
+                                                :size 17
                                                 :weight normal
                                                 :width normal
                                                 :powerline-scale 1.1)))))
