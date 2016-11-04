@@ -124,6 +124,7 @@
 (defun dotspacemacs/user-init ()
   (setq c-basic-offset 4)
   (setq css-indent-offset 2)
+  (setq custom-file (expand-file-name "custom.el" dotspacemacs-directory))
   (setq deft-directory "~/Dropbox/Notes")
   (setq display-time-24hr-format t
         display-time-default-load-average nil)
@@ -195,6 +196,3 @@
                           :height (+ current-height delta))))
   (bind-key "s-+" '(lambda () (interactive) (init/change-frame-font-height +10)))
   (bind-key "s-_" '(lambda () (interactive) (init/change-frame-font-height -10))))
-
-;; Do not write anything past this comment. This is where Emacs will
-;; auto-generate custom variable definitions.
