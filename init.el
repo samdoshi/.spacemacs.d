@@ -41,6 +41,7 @@
                                                     markdown
                                                     org
                                                     osx
+                                                    python
                                                     (shell :variables
                                                            shell-default-shell 'eshell
                                                            shell-default-term-shell "/usr/local/bin/zsh")
