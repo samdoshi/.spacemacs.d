@@ -196,4 +196,7 @@
                           (selected-frame)
                           :height (+ current-height delta))))
   (bind-key "s-+" '(lambda () (interactive) (init/change-frame-font-height +10)))
-  (bind-key "s-_" '(lambda () (interactive) (init/change-frame-font-height -10))))
+  (bind-key "s-_" '(lambda () (interactive) (init/change-frame-font-height -10)))
+
+  ;; Use C-h for backspace everywhere
+  (global-set-key "\C-h" 'delete-backward-char))
