@@ -25,33 +25,34 @@
                 dotspacemacs-enable-lazy-installation 'unused
                 dotspacemacs-ask-for-lazy-installation t
                 dotspacemacs-configuration-layer-path '()
-                dotspacemacs-configuration-layers '(auto-completion
-                                                    better-defaults
-                                                    colors
-                                                    (c-c++ :variables
-                                                           c-c++-enable-clang-support t)
-                                                    dash
-                                                    deft
-                                                    emacs-lisp
-                                                    finance
-                                                    git
-                                                    gtags
-                                                    haskell
-                                                    html
-                                                    markdown
-                                                    org
-                                                    osx
-                                                    python
-                                                    (shell :variables
-                                                           shell-default-shell 'eshell
-                                                           shell-default-term-shell "/usr/local/bin/zsh")
-                                                    (spell-checking :variables
-                                                                    spell-checking-enable-by-default nil)
-                                                    syntax-checking
-                                                    (ranger :variables
-                                                            ranger-show-preview t)
-                                                    version-control
-                                                    yaml)
+                dotspacemacs-configuration-layers
+                '(auto-completion
+                  better-defaults
+                  colors
+                  (c-c++ :variables
+                         c-c++-enable-clang-support t)
+                  dash
+                  deft
+                  emacs-lisp
+                  finance
+                  git
+                  gtags
+                  haskell
+                  html
+                  markdown
+                  org
+                  osx
+                  python
+                  (shell :variables
+                         shell-default-shell 'eshell
+                         shell-default-term-shell "/usr/local/bin/zsh")
+                  (spell-checking :variables
+                                  spell-checking-enable-by-default nil)
+                  syntax-checking
+                  (ranger :variables
+                          ranger-show-preview t)
+                  version-control
+                  yaml)
                 dotspacemacs-additional-packages '(editorconfig
                                                    extempore-mode)
                 dotspacemacs-excluded-packages '()
@@ -77,17 +78,18 @@
                 dotspacemacs-whitespace-cleanup 'changed
                 dotspacemacs-line-numbers nil
                 dotspacemacs-check-for-update nil)
-  (setq-default spacemacs-evil-cursors `((normal       ,init/solarized-yellow   box)
-                                         (insert       ,init/solarized-green   (bar  . 2))
-                                         (emacs        ,init/solarized-blue     box)
-                                         (hybrid       ,init/solarized-blue    (bar  . 2))
-                                         (replace      ,init/solarized-magenta (hbar . 2))
-                                         (evilified    ,init/solarized-yellow   box)
-                                         (visual       ,init/solarized-orange  (hbar . 2))
-                                         (motion       ,init/solarized-violet   box)
-                                         (lisp         ,init/solarized-magenta  box)
-                                         (iedit        ,init/solarized-red      box)
-                                         (iedit-insert ,init/solarized-red     (bar  . 2))))
+  (setq-default spacemacs-evil-cursors
+                `((normal       ,init/solarized-yellow   box)
+                  (insert       ,init/solarized-green   (bar  . 2))
+                  (emacs        ,init/solarized-blue     box)
+                  (hybrid       ,init/solarized-blue    (bar  . 2))
+                  (replace      ,init/solarized-magenta (hbar . 2))
+                  (evilified    ,init/solarized-yellow   box)
+                  (visual       ,init/solarized-orange  (hbar . 2))
+                  (motion       ,init/solarized-violet   box)
+                  (lisp         ,init/solarized-magenta  box)
+                  (iedit        ,init/solarized-red      box)
+                  (iedit-insert ,init/solarized-red     (bar  . 2))))
 
   (with-eval-after-load 'editorconfig
     (editorconfig-mode 1))
