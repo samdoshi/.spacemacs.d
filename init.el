@@ -135,9 +135,12 @@
   (setq evil-lisp-state-enter-lisp-state-on-command nil)
   (setq evil-escape-key-sequence "jk"
         evil-escape-unordered-key-sequence t)
+  (setq flycheck-c/c++-gcc-executable "gcc-5")
   (setq haskell-process-show-debug-tips nil)
   (setq ispell-dictionary "british")
-  (setq flycheck-c/c++-gcc-executable "gcc-5")
+  (setq ledger-mode-should-check-version nil
+        ledger-report-links-in-register nil
+        ledger-binary-path "hledger")
   (setq org-startup-indented t)
   (setq solarized-distinct-fringe-background t
         solarized-use-more-italic t
