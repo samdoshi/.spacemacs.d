@@ -194,6 +194,11 @@
 
   (spacemacs/set-leader-keys "aB" 'init/edit-Ledger)
 
+  ;; frame title
+  (setq frame-title-format "%b - Emacs")
+  ;; icon-title-format is for tabbed windows
+  (setq icon-title-format "%b - Emacs")
+
   ;; Change frame font sizes with Super-Shift-{-=}
   (defun init/change-frame-font-height (delta)
     (let ((current-height (face-attribute 'default :height)))
