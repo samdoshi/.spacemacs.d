@@ -148,11 +148,12 @@
         solarized-use-variable-pitch nil)
   (setq tab-width 4)
   (setq visual-line-fringe-indicators '(left-curly-arrow right-curly-arrow))
-  (add-hook 'markdown-mode-hook 'turn-on-visual-line-mode)
-  (add-hook 'org-mode-hook 'turn-on-visual-line-mode)
   (setq web-mode-markup-indent-offset 2
         web-mode-css-indent-offset 2
-        web-mode-code-indent-offset 2))
+        web-mode-code-indent-offset 2)
+  (add-hook 'markdown-mode-hook 'turn-on-visual-line-mode)
+  (add-hook 'org-mode-hook 'turn-on-visual-line-mode)
+  (add-hook 'prog-mode-hook 'turn-on-fci-mode))
 
 (defun dotspacemacs/user-config ()
   (setq hl-paren-colors '("#d33682"))
