@@ -43,6 +43,7 @@
                   org
                   osx
                   python
+                  rust
                   (shell :variables
                          shell-default-shell 'eshell
                          shell-default-term-shell "/usr/local/bin/zsh")
