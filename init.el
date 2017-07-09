@@ -43,6 +43,8 @@
                   org
                   osx
                   python
+                  (ranger :variables
+                          ranger-show-preview t)
                   rust
                   (shell :variables
                          shell-default-shell 'eshell
@@ -50,8 +52,6 @@
                   (spell-checking :variables
                                   spell-checking-enable-by-default nil)
                   syntax-checking
-                  (ranger :variables
-                          ranger-show-preview t)
                   version-control
                   yaml)
                 dotspacemacs-additional-packages '(editorconfig
@@ -164,8 +164,6 @@
         org-startup-folded "showall"
         org-bullets-bullet-list '("*"))
   (setq powerline-default-separator nil)
-  ;; remove (spaceline-compile) once 0.200 lands
-  (spaceline-compile)
 
   (defun init/apple-uk-keymap (map)
     (define-key map (kbd "M-2") #'(lambda () (interactive) (insert "€")))
