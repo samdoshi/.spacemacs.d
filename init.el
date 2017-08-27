@@ -54,7 +54,8 @@
                   syntax-checking
                   version-control
                   yaml)
-                dotspacemacs-additional-packages '(editorconfig
+                dotspacemacs-additional-packages '(all-the-icons
+                                                   editorconfig
                                                    extempore-mode)
                 dotspacemacs-excluded-packages '()
                 dotspacemacs-install-packages 'used-only))
@@ -126,6 +127,7 @@
                                                 :powerline-scale 1.1)))))
 
 (defun dotspacemacs/user-init ()
+  (setq all-the-icons-color-icons nil)
   (setq c-basic-offset 4)
   (setq css-indent-offset 2)
   (setq custom-file (expand-file-name "custom.el" dotspacemacs-directory))
@@ -142,6 +144,7 @@
   (setq ledger-mode-should-check-version nil
         ledger-report-links-in-register nil
         ledger-binary-path "hledger")
+  (setq neo-theme 'icons)
   (setq org-startup-indented t)
   (setq solarized-distinct-fringe-background t
         solarized-use-more-italic t
