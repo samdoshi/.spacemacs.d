@@ -97,11 +97,11 @@
     (editorconfig-mode 1))
 
   (let ((host (init/hashed-host-slug))
-        (desktop "24e0c4b6b602908fd5cc6be519f8d96b")
-        (laptop "1808cc85340608cde18d5cab8b3be29d")
-        (linux-desktop "5a3ddd28cb680f9f65caf6f45ccfb363"))
+        (osx-desktop "24e0c4b6b602908fd5cc6be519f8d96b")
+        (osx-laptop "1808cc85340608cde18d5cab8b3be29d")
+        (linux-desktop "1c093dc7c7abc05f76cdacd2ef83e5f5"))
     (message (concat "init/hashed-host-slug=" host))
-    (when (equal host desktop)
+    (when (equal host osx-desktop)
       (when window-system
         (menu-bar-mode 1)
         (set-frame-size (selected-frame) 100 60))
@@ -110,7 +110,7 @@
                                                 :weight normal
                                                 :width normal
                                                 :powerline-scale 1.1)))
-    (when (equal host laptop)
+    (when (equal host osx-laptop)
       (when window-system
         (menu-bar-mode 1)
         (set-frame-size (selected-frame) 120 46))
@@ -121,7 +121,7 @@
                                                 :powerline-scale 1.1)))
     (when (equal host linux-desktop)
       (setq-default dotspacemacs-default-font '("Roboto Mono"
-                                                :size 17
+                                                :size 24
                                                 :weight normal
                                                 :width normal
                                                 :powerline-scale 1.1)))))
