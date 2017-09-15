@@ -139,6 +139,7 @@
   (setq evil-escape-key-sequence "jk"
         evil-escape-unordered-key-sequence t)
   (setq flycheck-c/c++-gcc-executable "gcc-5")
+  (setq git-magit-status-fullscreen t)
   (setq haskell-process-show-debug-tips nil)
   (setq ispell-dictionary "british")
   (setq ledger-mode-should-check-version nil
