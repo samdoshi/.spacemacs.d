@@ -120,8 +120,8 @@
                                                 :width normal
                                                 :powerline-scale 1.1)))
     (when (equal host linux-desktop)
-      (setq-default dotspacemacs-default-font '("Roboto Mono"
-                                                :size 24
+      (setq-default dotspacemacs-default-font '("Monospace"
+                                                :size 30
                                                 :weight normal
                                                 :width normal
                                                 :powerline-scale 1.1)))))
@@ -209,8 +209,11 @@
       (set-face-attribute 'default
                           (selected-frame)
                           :height (+ current-height delta))))
-  (bind-key "s-+" '(lambda () (interactive) (init/change-frame-font-height +10)))
-  (bind-key "s-_" '(lambda () (interactive) (init/change-frame-font-height -10)))
+
+  (with-eval-after-load 'undo-tree
+    (unbind-key "M-_" undo-tree-map))
+  (bind-key "M-+" '(lambda () (interactive) (init/change-frame-font-height +10)))
+  (bind-key "M-_" '(lambda () (interactive) (init/change-frame-font-height -10)))
 
   ;; Use C-h for backspace everywhere
   (global-set-key "\C-h" 'delete-backward-char))
