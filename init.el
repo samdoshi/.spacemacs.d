@@ -138,7 +138,6 @@
   (setq evil-lisp-state-enter-lisp-state-on-command nil)
   (setq evil-escape-key-sequence "jk"
         evil-escape-unordered-key-sequence t)
-  (setq flycheck-c/c++-gcc-executable "gcc-5")
   (setq git-magit-status-fullscreen t)
   (setq haskell-process-show-debug-tips nil)
   (setq ispell-dictionary "british")
@@ -156,6 +155,7 @@
   (setq web-mode-markup-indent-offset 2
         web-mode-css-indent-offset 2
         web-mode-code-indent-offset 2)
+  (setq x-stretch-cursor t)
   (add-hook 'markdown-mode-hook 'turn-on-visual-line-mode)
   (add-hook 'org-mode-hook 'turn-on-visual-line-mode)
   (add-hook 'prog-mode-hook 'turn-on-fci-mode))
