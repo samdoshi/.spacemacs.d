@@ -39,6 +39,7 @@
                   gtags
                   haskell
                   html
+                  javascript
                   markdown
                   org
                   osx
