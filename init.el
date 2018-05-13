@@ -40,6 +40,7 @@
                   haskell
                   html
                   javascript
+                  lua
                   markdown
                   org
                   osx
