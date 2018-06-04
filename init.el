@@ -33,6 +33,7 @@
                          c-c++-enable-clang-support t)
                   dash
                   deft
+                  docker
                   emacs-lisp
                   finance
                   git
@@ -47,6 +48,7 @@
                   python
                   (ranger :variables
                           ranger-show-preview t)
+                  react
                   rust
                   (shell :variables
                          shell-default-shell 'eshell
