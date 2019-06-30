@@ -43,6 +43,7 @@
                   javascript
                   lua
                   markdown
+                  nixos
                   org
                   osx
                   python
@@ -58,9 +59,7 @@
                   syntax-checking
                   version-control
                   yaml)
-                dotspacemacs-additional-packages '(all-the-icons
-                                                   editorconfig
-                                                   extempore-mode)
+                dotspacemacs-additional-packages '(extempore-mode)
                 dotspacemacs-excluded-packages '()
                 dotspacemacs-install-packages 'used-only))
 
@@ -69,10 +68,8 @@
                 dotspacemacs-themes '(solarized-dark
                                       solarized-light
                                       spacemacs-dark
-                                      spacemacs-light
-                                      leuven
-                                      monokai
-                                      zenburn)
+                                      spacemacs-light)
+                dotspacemacs-mode-line-theme '(spacemacs :separator nil)
                 dotspacemacs-leader-key "SPC"
                 dotspacemacs-emacs-leader-key "M-m"
                 dotspacemacs-command-key "SPC"
@@ -130,8 +127,11 @@
                                                 :width normal
                                                 :powerline-scale 1.1)))))
 
+(defun dotspacemacs/user-env ()
+  ;; make this empty to disable Spacemacs generating a .spacemacs.env file
+  )
+
 (defun dotspacemacs/user-init ()
-  (setq all-the-icons-color-icons nil)
   (setq c-basic-offset 4)
   (setq css-indent-offset 2)
   (setq custom-file (expand-file-name "custom.el" dotspacemacs-directory))
@@ -160,6 +160,7 @@
         web-mode-css-indent-offset 2
         web-mode-code-indent-offset 2)
   (setq x-stretch-cursor t)
+  (setq x-gtk-use-system-tooltips nil)
   (add-hook 'markdown-mode-hook 'turn-on-visual-line-mode)
   (add-hook 'org-mode-hook 'turn-on-visual-line-mode)
   (add-hook 'prog-mode-hook 'turn-on-fci-mode))
@@ -171,7 +172,6 @@
         org-agenda-files (list (concat org-directory "/Today.org"))
         org-startup-folded "showall"
         org-bullets-bullet-list '("*"))
-  (setq powerline-default-separator nil)
 
   (defun init/apple-uk-keymap (map)
     (define-key map (kbd "M-2") #'(lambda () (interactive) (insert "€")))
@@ -198,7 +198,7 @@
 
   (defun init/edit-Ledger ()
     (interactive)
-    (find-file "~/Dropbox/Ledger/main.ledger"))
+    (find-file "~/Sync/Ledger/main.ledger"))
 
   (spacemacs/set-leader-keys "aB" 'init/edit-Ledger)
 
