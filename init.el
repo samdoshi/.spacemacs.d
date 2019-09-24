@@ -121,7 +121,7 @@
                                                 :width normal
                                                 :powerline-scale 1.1)))
     (when (equal host linux-desktop)
-      (setq-default dotspacemacs-default-font '("Monospace"
+      (setq-default dotspacemacs-default-font '("Iosevka"
                                                 :size 30
                                                 :weight normal
                                                 :width normal
