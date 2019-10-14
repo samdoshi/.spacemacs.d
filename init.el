@@ -59,7 +59,8 @@
                   syntax-checking
                   version-control
                   yaml)
-                dotspacemacs-additional-packages '(extempore-mode)
+                dotspacemacs-additional-packages '(direnv
+                                                   extempore-mode)
                 dotspacemacs-excluded-packages '()
                 dotspacemacs-install-packages 'used-only))
 
@@ -182,6 +183,9 @@
 
   (with-eval-after-load 'helm
     (init/apple-uk-keymap helm-map))
+
+  (with-eval-after-load 'direnv
+    (direnv-mode))
 
   (defun init/kill-deft-window (orig-fun &rest args)
     (interactive)
