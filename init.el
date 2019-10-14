@@ -101,7 +101,9 @@
   (let ((host (init/hashed-host-slug))
         (osx-desktop "24e0c4b6b602908fd5cc6be519f8d96b")
         (osx-laptop "1808cc85340608cde18d5cab8b3be29d")
-        (linux-desktop "1c093dc7c7abc05f76cdacd2ef83e5f5"))
+        (linux-desktop "1c093dc7c7abc05f76cdacd2ef83e5f5")
+        (linux-tablet "c7f8aabe37e027ef5f91a00199763f6b"))
+
     (message (concat "init/hashed-host-slug=" host))
     (when (equal host osx-desktop)
       (when window-system
@@ -124,6 +126,12 @@
     (when (equal host linux-desktop)
       (setq-default dotspacemacs-default-font '("Iosevka"
                                                 :size 30
+                                                :weight normal
+                                                :width normal
+                                                :powerline-scale 1.1)))
+    (when (equal host linux-tablet)
+      (setq-default dotspacemacs-default-font '("Iosevka"
+                                                :size 40
                                                 :weight normal
                                                 :width normal
                                                 :powerline-scale 1.1)))))
