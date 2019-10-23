@@ -227,9 +227,9 @@
                           :height (+ current-height delta))))
 
   (with-eval-after-load 'undo-tree
-    (unbind-key "M-_" undo-tree-map))
-  (bind-key "M-+" '(lambda () (interactive) (init/change-frame-font-height +10)))
-  (bind-key "M-_" '(lambda () (interactive) (init/change-frame-font-height -10)))
+    (unbind-key "C-_" undo-tree-map))
+  (bind-key "C-+" '(lambda () (interactive) (init/change-frame-font-height +10)))
+  (bind-key "C-_" '(lambda () (interactive) (init/change-frame-font-height -10)))
 
   ;; Use C-h for backspace everywhere
   (global-set-key "\C-h" 'delete-backward-char))
