@@ -59,7 +59,8 @@
                   syntax-checking
                   version-control
                   yaml)
-                dotspacemacs-additional-packages '(direnv
+                dotspacemacs-additional-packages '(csound-mode
+                                                   direnv
                                                    extempore-mode)
                 dotspacemacs-excluded-packages '()
                 dotspacemacs-install-packages 'used-only))
